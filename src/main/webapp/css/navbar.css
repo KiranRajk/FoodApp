@@ -1,0 +1,322 @@
+/* =========================================
+   FoodApp - Shared Navigation Bar
+   ========================================= */
+
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+
+    box-shadow: 0 3px 14px rgba(100, 70, 40, 0.06);
+}
+
+.navbar-container {
+    width: min(1200px, 92%);
+    min-height: 76px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--spacing-lg);
+}
+
+/* Logo */
+
+.navbar-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--text-primary);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+
+    white-space: nowrap;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        #FF784E
+    );
+
+    color: #FFFFFF;
+    border-radius: 13px;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    box-shadow: var(--shadow-button);
+}
+
+.logo-highlight {
+    color: var(--primary-color);
+}
+
+/* Navigation Links */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-link {
+    position: relative;
+
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: color var(--transition-fast);
+}
+
+.navbar-link:hover {
+    color: var(--primary-color);
+}
+
+/* Login Button */
+
+.navbar-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100px;
+    padding: 10px 22px;
+
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+
+    border-radius: var(--radius-pill);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow: var(--shadow-button);
+
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.navbar-login:hover {
+    color: #FFFFFF;
+    background-color: var(--primary-hover);
+
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Profile Icon */
+
+.navbar-profile {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        #FF784E
+    );
+
+    border-radius: 50%;
+    box-shadow: var(--shadow-button);
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.navbar-profile:hover {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Keyboard Accessibility */
+
+.navbar a:focus-visible {
+    outline: 3px solid rgba(244, 81, 30, 0.4);
+    outline-offset: 4px;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 600px) {
+
+    .navbar-container {
+        min-height: 68px;
+        gap: 12px;
+    }
+
+    .navbar-logo {
+        font-size: 21px;
+        gap: 7px;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 21px;
+    }
+
+    .navbar-links {
+        gap: 16px;
+    }
+
+    .navbar-link {
+        font-size: 13px;
+    }
+
+    .navbar-login {
+        min-width: auto;
+        padding: 9px 15px;
+        font-size: 13px;
+    }
+
+    .navbar-profile {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .navbar-container {
+        width: 95%;
+    }
+
+    .navbar-logo {
+        font-size: 18px;
+    }
+
+    .navbar-links {
+        gap: 11px;
+    }
+
+    .navbar-link {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   FoodApp - Logout Icon
+   ========================================= */
+
+.navbar-logout-form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    flex-shrink: 0;
+}
+
+.navbar-logout {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        #FF784E
+    );
+
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    box-shadow: var(--shadow-button);
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+}
+
+.navbar-logout svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+
+.navbar-logout:hover {
+    color: #FFFFFF;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary-hover),
+        #FF784E
+    );
+
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.navbar-logout:active {
+    transform: translateY(0);
+}
+
+.navbar-logout:focus-visible {
+    outline: 3px solid rgba(244, 81, 30, 0.35);
+    outline-offset: 3px;
+}
+
+/* Responsive sizing */
+
+@media (max-width: 600px) {
+    .navbar-logout {
+        width: 38px;
+        height: 38px;
+    }
+
+    .navbar-logout svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Keep profile and logout icons visually grouped */
+
+.navbar-profile {
+    flex-shrink: 0;
+}
+
+.navbar-logout-form {
+    margin-left: -18px;
+}

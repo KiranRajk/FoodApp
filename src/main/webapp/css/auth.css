@@ -1,0 +1,208 @@
+/* ========================================
+   AUTHENTICATION NAVBAR
+======================================== */
+
+.auth-navbar {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.auth-navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 92%;
+    max-width: 1400px;
+    min-height: 86px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   AUTHENTICATION LOGO
+======================================== */
+
+.auth-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+}
+
+.auth-logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff7043, #f4511e);
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 12px rgba(244, 81, 30, 0.18);
+
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.auth-logo-text {
+    color: var(--text-primary);
+
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.auth-logo-text span {
+    color: var(--primary-color);
+}
+
+
+/* ========================================
+   AUTHENTICATION NAVIGATION LINK
+======================================== */
+
+.auth-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.auth-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: var(--text-secondary);
+    background: transparent;
+
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 650;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.auth-nav-link:hover {
+    color: var(--primary-color);
+    background: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+
+/* ========================================
+   AUTHENTICATION FOOTER
+======================================== */
+
+.auth-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 66px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+
+    text-align: center;
+}
+
+.auth-footer p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 600px) {
+
+    .auth-navbar-inner {
+        width: 92%;
+        min-height: 72px;
+    }
+
+    .auth-logo {
+        gap: 9px;
+    }
+
+    .auth-logo-icon {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 13px;
+        font-size: 25px;
+    }
+
+    .auth-logo-text {
+        font-size: 24px;
+    }
+
+    .auth-nav-link {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .auth-footer {
+        min-height: 58px;
+        padding: 15px 12px;
+    }
+
+    .auth-footer p {
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .auth-navbar-inner {
+        gap: 10px;
+    }
+
+    .auth-logo-text {
+        font-size: 21px;
+    }
+
+    .auth-logo-icon {
+        width: 37px;
+        height: 37px;
+
+        border-radius: 11px;
+        font-size: 22px;
+    }
+
+    .auth-nav-link {
+        padding: 8px;
+        font-size: 10px;
+    }
+}

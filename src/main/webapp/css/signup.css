@@ -1,0 +1,370 @@
+/* ========================================
+   SIGNUP PAGE
+======================================== */
+
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 650px;
+    padding: 55px 20px 70px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255, 183, 77, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(244, 81, 30, 0.08),
+            transparent 35%
+        ),
+        var(--background-color);
+}
+
+
+/* ========================================
+   SIGNUP CARD
+======================================== */
+
+.signup-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 40px 38px 32px;
+
+    background: var(--surface-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+
+    box-shadow: var(--shadow-md);
+
+    text-align: center;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.signup-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    margin: 0 auto 20px;
+
+    background: var(--accent-color);
+    border: 1px solid rgba(244, 81, 30, 0.10);
+    border-radius: 19px;
+
+    font-size: 29px;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.signup-label {
+    display: inline-block;
+
+    margin-bottom: 11px;
+
+    color: var(--primary-color);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.signup-card h1 {
+    margin-bottom: 11px;
+
+    color: var(--text-primary);
+
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.signup-description {
+    margin-bottom: 28px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   FORM FIELDS
+======================================== */
+
+.form-group {
+    margin-bottom: 19px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text-primary);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+
+    width: 100%;
+    padding: 13px 14px;
+
+    color: var(--text-primary);
+    background: #ffffff;
+
+    border: 1px solid var(--border-color);
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.form-group input {
+    min-height: 47px;
+}
+
+.form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-light);
+    opacity: 1;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #e2cfc0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: #fffdfb;
+
+    border-color: var(--primary-color);
+
+    box-shadow: 0 0 0 3px rgba(244, 81, 30, 0.10);
+}
+
+
+/* ========================================
+   CREATE ACCOUNT BUTTON
+======================================== */
+
+.signup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 51px;
+
+    margin-top: 8px;
+    padding: 14px 20px;
+
+    color: #ffffff;
+    background: var(--primary-color);
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(244, 81, 30, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.signup-btn:hover {
+    background: var(--primary-hover);
+
+    box-shadow: 0 7px 16px rgba(244, 81, 30, 0.25);
+
+    transform: translateY(-1px);
+}
+
+.signup-btn:active {
+    transform: translateY(0);
+}
+
+.signup-btn:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
+}
+
+.button-arrow {
+    font-size: 18px;
+
+    transition: transform 0.2s ease;
+}
+
+.signup-btn:hover .button-arrow {
+    transform: translateX(3px);
+}
+
+
+/* ========================================
+   LOGIN LINK
+======================================== */
+
+.login-link {
+    margin-top: 24px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.login-link a {
+    margin-left: 4px;
+
+    color: var(--primary-color);
+
+    font-weight: 750;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.login-link a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   BOTTOM DIVIDER
+======================================== */
+
+.signup-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin: 26px 0 16px;
+
+    color: var(--text-light);
+}
+
+.signup-divider::before,
+.signup-divider::after {
+    content: "";
+
+    flex: 1;
+    height: 1px;
+
+    background: var(--border-color);
+}
+
+.signup-divider span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.signup-note {
+    color: var(--text-light);
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 600px) {
+
+    .signup-container {
+        min-height: auto;
+        padding: 35px 17px 45px;
+    }
+
+    .signup-card {
+        max-width: 480px;
+        padding: 32px 23px 26px;
+
+        border-radius: 16px;
+    }
+
+    .signup-icon {
+        width: 59px;
+        height: 59px;
+
+        margin-bottom: 18px;
+
+        border-radius: 17px;
+        font-size: 26px;
+    }
+
+    .signup-card h1 {
+        font-size: 24px;
+    }
+
+    .signup-description {
+        margin-bottom: 24px;
+        font-size: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 17px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .signup-card {
+        padding: 28px 17px 23px;
+    }
+
+    .signup-card h1 {
+        font-size: 22px;
+    }
+
+    .login-link {
+        font-size: 12px;
+    }
+}

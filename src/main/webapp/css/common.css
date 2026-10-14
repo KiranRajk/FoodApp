@@ -1,0 +1,471 @@
+/* =========================================
+   FoodApp - Common Design System
+   Theme: Warm Neumorphism
+   ========================================= */
+
+
+/* =========================================
+   1. CSS VARIABLES
+   ========================================= */
+
+:root {
+    /* Brand Colors */
+    --primary-color: #F4511E;
+    --primary-hover: #D84315;
+    --secondary-color: #FFB74D;
+    --accent-color: #FFE0B2;
+
+    /* Background Colors */
+    --background-color: #FFF8F0;
+    --surface-color: #FFFFFF;
+    --surface-hover: #FFF3E8;
+
+    /* Text Colors */
+    --text-primary: #292524;
+    --text-secondary: #78716C;
+    --text-light: #A8A29E;
+
+    /* Status Colors */
+    --success-color: #2E7D32;
+    --error-color: #D32F2F;
+    --warning-color: #ED6C02;
+
+    /* Border Colors */
+    --border-color: #F0E5DA;
+
+    /* Neumorphic Shadows */
+    --shadow-soft:
+        6px 6px 16px rgba(100, 70, 40, 0.08),
+        -6px -6px 16px rgba(255, 255, 255, 0.85);
+
+    --shadow-card:
+        0 4px 16px rgba(100, 70, 40, 0.08);
+
+    --shadow-hover:
+        0 10px 28px rgba(100, 70, 40, 0.14);
+
+    --shadow-button:
+        0 4px 10px rgba(244, 81, 30, 0.22);
+
+    /* Border Radius */
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 20px;
+    --radius-pill: 50px;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+
+/* =========================================
+   2. RESET AND BASE STYLES
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(244, 81, 30, 0.35);
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   3. TYPOGRAPHY
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+h2 {
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-muted {
+    color: var(--text-light);
+}
+
+.text-orange {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   4. COMMON LAYOUT
+   ========================================= */
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--spacing-xxl) 0;
+}
+
+.section-title {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-description {
+    margin-top: var(--spacing-sm);
+    max-width: 650px;
+}
+
+
+/* =========================================
+   5. BUTTONS
+   ========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: var(--radius-small);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    text-align: center;
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-button);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--surface-hover);
+    border-color: var(--primary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* =========================================
+   6. COMMON CARDS
+   ========================================= */
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(240, 229, 218, 0.8);
+    border-radius: var(--radius-large);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-card);
+
+    transition:
+        box-shadow var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.card-hover:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+
+/* =========================================
+   7. FORM CONTROLS
+   ========================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 14px;
+
+    background-color: #FFFCF9;
+    color: var(--text-primary);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-small);
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.form-control::placeholder {
+    color: var(--text-light);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(244, 81, 30, 0.12);
+}
+
+
+/* =========================================
+   8. STATUS MESSAGES
+   ========================================= */
+
+.alert {
+    padding: 12px 16px;
+    margin-bottom: var(--spacing-md);
+
+    border-radius: var(--radius-small);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert-success {
+    color: var(--success-color);
+    background-color: #E8F5E9;
+    border: 1px solid #C8E6C9;
+}
+
+.alert-error {
+    color: var(--error-color);
+    background-color: #FFEBEE;
+    border: 1px solid #FFCDD2;
+}
+
+.alert-warning {
+    color: var(--warning-color);
+    background-color: #FFF3E0;
+    border: 1px solid #FFE0B2;
+}
+
+
+/* =========================================
+   9. BADGES
+   ========================================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-orange {
+    color: var(--primary-hover);
+    background-color: #FBE9E7;
+}
+
+.badge-success {
+    color: var(--success-color);
+    background-color: #E8F5E9;
+}
+
+.badge-warning {
+    color: #8D4B00;
+    background-color: #FFF3E0;
+}
+
+
+/* =========================================
+   10. DIVIDERS
+   ========================================= */
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    border: none;
+    margin: var(--spacing-lg) 0;
+}
+
+
+/* =========================================
+   11. RESPONSIVE UTILITIES
+   ========================================= */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--spacing-sm);
+}
+
+.gap-md {
+    gap: var(--spacing-md);
+}
+
+.gap-lg {
+    gap: var(--spacing-lg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+/* =========================================
+   12. REDUCED MOTION ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

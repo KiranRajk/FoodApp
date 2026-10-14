@@ -1,0 +1,795 @@
+/* ================= GENERAL STYLES ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f9fb;
+    color: #252525;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+
+
+
+/* ================= HERO SECTION ================= */
+
+.orders-hero {
+    background: linear-gradient(
+        120deg,
+        #fff0e5 0%,
+        #fff8f1 55%,
+        #ffffff 100%
+    );
+
+    border-bottom: 1px solid #f4e5d9;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 24px 60px;
+}
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #e65100;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    color: #262626;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+
+    margin-bottom: 14px;
+}
+
+.hero-content p {
+    max-width: 580px;
+
+    color: #686868;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.orders-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 70px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    color: #252525;
+    font-size: 25px;
+    font-weight: 800;
+
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.browse-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #e65100;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.browse-btn:hover {
+    background: #c94300;
+    transform: translateY(-1px);
+}
+
+
+/* ================= ORDERS LIST ================= */
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+/* ================= ORDER CARD ================= */
+
+.order-card {
+    background: #ffffff;
+
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.035);
+
+    transition:
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.order-card:hover {
+    border-color: #e8d4c7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ================= ORDER HEADER ================= */
+
+.order-card-header {
+    padding: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    min-width: 0;
+}
+
+.restaurant-image-wrapper {
+    width: 86px;
+    height: 86px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+    overflow: hidden;
+
+    background: #f4f4f4;
+}
+
+.restaurant-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.restaurant-details {
+    min-width: 0;
+}
+
+.restaurant-details h3 {
+    color: #252525;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    margin-bottom: 6px;
+
+    overflow-wrap: anywhere;
+}
+
+.order-date {
+    color: #777777;
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.order-number {
+    color: #a14b20;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ================= ORDER SUMMARY ================= */
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+.status-badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.status-placed {
+    background: #fff4d6;
+    color: #956300;
+}
+
+.status-preparing {
+    background: #e8efff;
+    color: #3155b8;
+}
+
+.status-delivery {
+    background: #e6f3ff;
+    color: #1766a5;
+}
+
+.status-delivered {
+    background: #e3f7e9;
+    color: #188044;
+}
+
+.status-cancelled {
+    background: #ffe7e7;
+    color: #bf2c2c;
+}
+
+.status-default {
+    background: #eeeeee;
+    color: #555555;
+}
+
+.order-total {
+    color: #262626;
+    font-size: 23px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.item-count {
+    color: #888888;
+    font-size: 12px;
+}
+
+
+/* ================= EXPAND/COLLAPSE BUTTON ================= */
+
+.order-toggle {
+    width: 100%;
+
+    padding: 15px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    border: none;
+    border-top: 1px solid #f0f0f0;
+
+    background: #ffffff;
+    color: #d94d00;
+
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.order-toggle:hover {
+    background: #fff8f3;
+}
+
+.order-toggle:focus-visible {
+    outline: 2px solid #e65100;
+    outline-offset: -3px;
+}
+
+.toggle-icon {
+    font-size: 21px;
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+.order-toggle[aria-expanded="true"] {
+    background: #fff8f3;
+}
+
+
+/* ================= EXPANDABLE DETAILS ================= */
+
+.order-details {
+    display: none;
+
+    padding: 0 24px 24px;
+
+    background: #ffffff;
+}
+
+.order-details.expanded {
+    display: block;
+}
+
+.details-divider {
+    height: 1px;
+    background: #eeeeee;
+
+    margin-bottom: 22px;
+}
+
+.details-heading {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 17px;
+}
+
+
+/* ================= FOOD ITEMS ================= */
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.food-image-wrapper {
+    width: 66px;
+    height: 66px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+.food-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.food-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.food-details h5 {
+    color: #292929;
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+    overflow-wrap: anywhere;
+}
+
+.food-details p {
+    color: #777777;
+    font-size: 12px;
+}
+
+.food-price {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.no-items {
+    padding: 18px 0;
+
+    color: #777777;
+    font-size: 13px;
+}
+
+
+/* ================= PAYMENT SUMMARY ================= */
+
+.order-payment-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    margin-top: 24px;
+    padding: 20px;
+
+    border: 1px solid #f1e6de;
+    border-radius: 12px;
+
+    background: #fffaf6;
+}
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.summary-label {
+    color: #858585;
+    font-size: 12px;
+}
+
+.payment-info strong {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.final-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.final-total span {
+    color: #777777;
+    font-size: 12px;
+}
+
+.final-total strong {
+    color: #e65100;
+    font-size: 23px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* ================= EMPTY ORDERS ================= */
+
+.empty-orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 75px 24px;
+
+    border: 1px dashed #e2d8d1;
+    border-radius: 16px;
+
+    background: #ffffff;
+}
+
+.empty-icon {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 24px;
+
+    border-radius: 50%;
+
+    background: #fff0e5;
+
+    font-size: 43px;
+}
+
+.empty-orders h2 {
+    color: #282828;
+    font-size: 25px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.empty-orders p {
+    max-width: 450px;
+
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin-bottom: 24px;
+}
+
+.empty-browse-btn {
+    min-width: 190px;
+}
+
+
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        padding: 14px 18px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+
+    .hero-content {
+        padding: 42px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .orders-container {
+        padding: 35px 18px 50px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .order-card-header {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .restaurant-image-wrapper {
+        width: 72px;
+        height: 72px;
+    }
+
+    .restaurant-details h3 {
+        font-size: 17px;
+    }
+
+    .order-total {
+        font-size: 20px;
+    }
+
+    .order-details {
+        padding: 0 20px 20px;
+    }
+
+    .order-toggle {
+        padding: 14px 20px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 520px) {
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .hero-content {
+        padding: 35px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .orders-container {
+        padding: 30px 12px 40px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .order-card {
+        border-radius: 12px;
+    }
+
+    .order-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        padding: 18px;
+    }
+
+    .restaurant-info {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .restaurant-image-wrapper {
+        width: 68px;
+        height: 68px;
+    }
+
+    .restaurant-details h3 {
+        font-size: 16px;
+    }
+
+    .order-summary {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .status-badge {
+        justify-self: start;
+    }
+
+    .order-total {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+
+        font-size: 21px;
+    }
+
+    .item-count {
+        grid-column: 1;
+    }
+
+    .order-toggle {
+        padding: 14px 18px;
+    }
+
+    .order-details {
+        padding: 0 16px 18px;
+    }
+
+    .details-heading {
+        font-size: 14px;
+    }
+
+    .order-item {
+        gap: 11px;
+    }
+
+    .food-image-wrapper {
+        width: 55px;
+        height: 55px;
+    }
+
+    .food-details h5 {
+        font-size: 12px;
+    }
+
+    .food-details p {
+        font-size: 11px;
+    }
+
+    .food-price {
+        font-size: 12px;
+    }
+
+    .order-payment-summary {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+
+        padding: 16px;
+    }
+
+    .final-total {
+        align-items: flex-start;
+
+        padding-top: 14px;
+        border-top: 1px solid #eee0d6;
+    }
+
+    .final-total strong {
+        font-size: 21px;
+    }
+
+    .empty-orders {
+        padding: 55px 18px;
+    }
+
+    .empty-orders h2 {
+        font-size: 22px;
+    }
+
+    .footer-content {
+        padding: 30px 18px;
+    }
+}
